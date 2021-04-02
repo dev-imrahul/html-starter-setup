@@ -1,0 +1,24 @@
+@import './_partial/color';
+@import './_partial/fonts';
+@import './_partial/mixins';
+@import './_partial/variable';
+
+* {
+  margin: 0 auto;
+}
+
+body {
+  font-size: 16px;
+  font-family: $body-font;
+}
+
+@each $name,
+$value in $colors {
+  .color_#{$name} {
+    color: #{$value};
+  }
+
+  .bg_#{$name} {
+    color: #{$value};
+  }
+}
